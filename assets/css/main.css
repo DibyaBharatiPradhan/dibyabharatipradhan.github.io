@@ -51,7 +51,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-    color: var(--accent-primary);
+    color: #334155;
     text-decoration: none;
     transition: var(--transition);
 }
@@ -79,7 +79,7 @@ a:hover {
     left: 0;
     width: var(--sidebar-width);
     height: 100vh;
-    background: #e2e8f0;
+    background: linear-gradient(145deg, #f8f6fb, #e4dcf1);
     border-right: 1px solid var(--border-color);
     display: flex;
     flex-direction: column;
@@ -100,18 +100,18 @@ a:hover {
     border-radius: 50%;
     margin-bottom: 1.5rem;
     object-fit: cover;
-    border: 3px solid #f3f4f6;
+    border: 2px solid #000000;
 }
 
 #logo #title {
     font-size: 1.4rem;
-    color: var(--text-main);
+    color: #000000;
     margin-bottom: 0.2rem;
 }
 
 #logo p {
     font-size: 0.95rem;
-    color: var(--text-muted);
+    color: #000000;
 }
 
 #nav ul {
@@ -126,7 +126,7 @@ a:hover {
     display: flex;
     align-items: center;
     padding: 0.75rem 1rem;
-    color: var(--text-muted);
+    color: #000000;
     font-size: 1.05rem;
     font-weight: 500;
     border-radius: 6px;
@@ -219,7 +219,7 @@ header h2 {
     border-radius: 50%;
     object-fit: cover;
     box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-    border: 4px solid var(--accent-primary);
+    border: 2px solid #000000;
 }
 
 .hero-title {
@@ -230,7 +230,7 @@ header h2 {
     color: var(--text-main);
 }
 .hero-title strong {
-    color: var(--accent-primary);
+    color: #334155;
 }
 
 .hero-subtitle {
@@ -423,6 +423,7 @@ header h2 {
 }
 
 .res-desc {
+    text-align: justify;
     margin-bottom: 1.5rem;
     color: var(--text-muted);
 }
@@ -607,3 +608,16 @@ header h2 {
 }
 
 header { text-align: center; width: 100%; display: block; }
+
+@media screen and (max-width: 736px) {
+    .panel { padding: 3rem 1.25rem !important; }
+    .container { padding: 0; }
+    .grid-2, .grid-3 { grid-template-columns: 1fr !important; gap: 1.5rem !important; }
+    .research-tags { justify-content: center !important; }
+    .timeline-content-flex { flex-direction: column; gap: 0.25rem; }
+    .timeline-left { flex: none; width: 100%; border-right: none; padding-right: 0; text-align: left; margin-bottom: 0.5rem; }
+    .hero-avatar { width: 200px; height: 200px; }
+    .hero-title { font-size: 2rem !important; }
+    .hero-image-wrap { margin-bottom: 1rem; }
+    #header { padding: 0.75rem 1rem !important; }
+}
